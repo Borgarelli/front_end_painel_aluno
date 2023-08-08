@@ -7,16 +7,16 @@
   <script>
   export default {
     name: 'TheHeader',
-    // ... outras definições
+
   }
   </script>
   
   <style scoped>
-  /* Estilos específicos para o componente HeaderElement */
+  
   .custom-header {
-    background-color: #ffff;
-    color: black;
-    padding: 0 20px;
+    width: 390px;
+    height: 69px;
+    flex-shrink: 0;
   }
   
   .logo {
@@ -26,12 +26,5 @@
     line-height: 60px;
   }
   
-  .menu {
-    line-height: 60px;
-  }
-  
-  .el-menu-item {
-    padding: 0 15px;
-  }
   </style>
   

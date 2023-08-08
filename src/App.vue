@@ -14,6 +14,4 @@
   color: #2c3e50;
   background: #FFF;
 }
-
-
 </style>

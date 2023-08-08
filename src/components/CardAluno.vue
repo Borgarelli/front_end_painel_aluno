@@ -1,10 +1,12 @@
 <template>
   <div class="card">
     <div class="card-content">
-      <h2 class="card-title">Kauã Borgarelli</h2>
-      <p class="card-description">Nome do aluno</p>
-      <button class="card-button">Saiba Mais</button>
+      <div class="card-content2">
+        <h2 class="card-title">Kauã Borgarelli</h2>
+        <p class="card-description">Nome do aluno</p>
+      </div>
     </div>
+    <img  class="imagem" alt="exit" src="@/assets/portal-close.png">
   </div>
 </template>
 
@@ -20,9 +22,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .card {
+      display: flex;
       margin: auto;
       width: 360px;
-      padding: 8px 12px 8px 12px;
+      padding: 2px 2px;
       border-radius: 12px 12px 0px 0px;
       border: 1px;
       background-color: linear-gradient(0deg, #E8ECEF, #E8ECEF),
@@ -35,8 +38,8 @@ export default {
 
     .card-content{
       display: flex;
-      flex-direction: column;
       align-items: flex-start;
+      gap: 17px;
     }
     
     .card-title {
@@ -56,17 +59,16 @@ export default {
       font-weight: 400;
       line-height: normal;
     }
+    .card-content2 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
     
-    .card-button {
-      position: flex;
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 16px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+    .imagem {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
     }
 
 h3 {

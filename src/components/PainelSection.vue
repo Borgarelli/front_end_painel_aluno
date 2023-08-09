@@ -14,8 +14,8 @@
 
 <script setup lang="ts">
 defineProps<{
-  label?: string
-  sublabel?:string
+  label?: string | undefined
+  sublabel?:string | undefined
 }>()
 
 </script>

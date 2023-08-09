@@ -3,8 +3,8 @@
     <div class="footer-content">
       <img class="layers" alt="layers" src="../assets/layers.png">
       <div class="footer-text">
-        <h2 class="footer-title">{{ nomeAluno }}</h2>
-        <p class="footer-description">{{ descricaoAluno }}</p>
+        <h2 class="footer-title">Nome do Aluno</h2>
+        <p class="footer-description">Descrição do aluno</p>
       </div>
       <img class="exit" alt="exit" src="../assets/portal-close.png">
     </div>
@@ -12,15 +12,6 @@
 </template>
 
 <script setup lang="ts">
- withDefaults(defineProps<{
-  nomeAluno: string,
-  descricaoAluno: string
- }>(),
- {
-  nomeAluno: 'Kauã',
-  descricaoAluno: 'Nome do Aluno'
-}
- )
 </script>
 
 <style scoped>
@@ -29,10 +20,10 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: white; /* Define o fundo como transparente */
+  background-color: white; 
   padding: 12px 0;
   box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
-  z-index: 999; /* Ajuste a ordem de empilhamento conforme necessário */
+  z-index: 999; 
 }
 
 .footer-content {

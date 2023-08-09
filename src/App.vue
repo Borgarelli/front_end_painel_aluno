@@ -6,7 +6,7 @@ import PainelSection from  './components/PainelSection.vue'
   <div class="app">
 
     <PainelSection label="teste" sublabel="assunto do testes">
-      <router-link to="/highlights">highlights</router-link>
+      <router-link to="/highlights">Adicionar a tela de seleção de alunos aqui</router-link>
     </PainelSection>
     <RouterView/>
   </div>

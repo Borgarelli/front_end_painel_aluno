@@ -1,13 +1,13 @@
 <template>
   <div id="users" v-for="user in users">
-    <userButton :user=user></userButton>
+    <UserButton :user=user></UserButton>
     <TheFooter/>
   </div>
 </template>
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import TheFooter from '../components/TheFooter.vue';
-import userButton from '../components/userButton.vue';
+import UserButton from '../components/UserButton.vue';
 
 const users = ref([
     {

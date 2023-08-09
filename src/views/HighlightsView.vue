@@ -6,6 +6,7 @@
             <button class="button"><p>3º Bimestre</p></button>
             <button class="button"><p>4º Bimestre</p></button>
     </div>
+    <h4>Selecione a disciplina</h4>
     <Slider/>
     <TheFooter/>
 </div>
@@ -13,6 +14,8 @@
 
 <script setup lang="ts">
 import Slider from '../components/Slider.vue';
+import TheFooter from '../components/TheFooter.vue';
+
 console.log('aqui')
 </script>
 

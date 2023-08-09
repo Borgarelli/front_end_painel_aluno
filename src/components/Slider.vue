@@ -9,8 +9,9 @@
   </template>
   
   <script setup lang="ts">
-  import { ref } from 'vue';
-  
+  import { ref } from 'vue'; 
+
+
   const items = ref(['Português', 'Matemática', 'História', 'Artes', 'Geografia']);
   const track = ref<HTMLDivElement | null>(null);
   const touchStartX = ref(0);

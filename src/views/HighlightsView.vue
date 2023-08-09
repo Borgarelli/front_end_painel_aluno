@@ -6,11 +6,13 @@
             <button class="button"><p>3º Bimestre</p></button>
             <button class="button"><p>4º Bimestre</p></button>
     </div>
+    <Slider/>
     <TheFooter/>
 </div>
 </template>
 
 <script setup lang="ts">
+import Slider from '../components/Slider.vue';
 console.log('aqui')
 </script>
 

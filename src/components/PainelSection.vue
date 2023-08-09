@@ -4,7 +4,7 @@
           {{ label }}
           <div class="subtitle">
             {{ sublabel }}
-            <div class="form">
+            <div class="body">
               <slot></slot>
             </div>
           </div>
@@ -15,7 +15,7 @@
 <script setup lang="ts">
 defineProps<{
   label: string
-  sublabel:string
+  sublabel?:string
 }>()
 
 </script>
@@ -33,15 +33,22 @@ defineProps<{
 .title {
   display: flex;
   flex-direction: column;
-  font-size: 1.5em;
+  text-align: left;
+  font-size: 1.1em;
   font-weight: 600;
-  color: #007B9E;
+  color: var(--label);
   margin-bottom: 1em;
 }
 
 .subtitle {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  font-size: .7em;
+  color: var(--sublabel)
+}
+
+.body {
+  text-align: center;
+  justify-content: center;
 }
 </style>

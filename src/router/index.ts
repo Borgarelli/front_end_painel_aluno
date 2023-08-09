@@ -1,24 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HighlightsView from "../views/HighlightsView.vue";
-import AboutViewVue from "../views/AboutView.vue";
-import DestaquesView from "../views/DestaquesView.vue"
+import SelectUser from "../views/SelectUser.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: AboutViewVue,
+    component: SelectUser,
   },
   {
-    path: "/highlights",
+    path: "/studentPainel/:id",
     name: "highlights",
     component: HighlightsView,
   },
-  {
-    path: "/destaques",
-    name: "destaques",
-    component: DestaquesView
-  }
 ];
 
 export const router = createRouter({

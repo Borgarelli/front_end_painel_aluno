@@ -9,7 +9,6 @@
 
     <script setup lang="ts">
     import PainelSection from  '../components/PainelSection.vue'
-    console.log('aqui')
     </script>
 
     <style>

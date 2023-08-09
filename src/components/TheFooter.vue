@@ -1,30 +1,26 @@
 <template>
   <el-footer class="footer">
     <div class="footer-content">
-      <img class="layers" alt="layers" src="@/assets/layers.png">
+      <img class="layers" alt="layers" src="../assets/layers.png">
       <div class="footer-text">
         <h2 class="footer-title">{{ nomeAluno }}</h2>
         <p class="footer-description">{{ descricaoAluno }}</p>
       </div>
-      <img class="exit" alt="exit" src="@/assets/portal-close.png">
+      <img class="exit" alt="exit" src="../assets/portal-close.png">
     </div>
   </el-footer>
 </template>
 
-<script>
-export default {
-  name: 'FooterElement',
-  props: {
-    nomeAluno: {
-      type: String,
-      default: 'Kauã Borgarelli'
-    },
-    descricaoAluno: {
-      type: String,
-      default: 'Nome do aluno'
-    }
-  }
+<script setup lang="ts">
+ withDefaults(defineProps<{
+  nomeAluno: string,
+  descricaoAluno: string
+ }>(),
+ {
+  nomeAluno: 'Kauã',
+  descricaoAluno: 'Nome do Aluno'
 }
+ )
 </script>
 
 <style scoped>

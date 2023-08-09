@@ -4,22 +4,11 @@
     <TheFooter/>
   </div>
 </template>
-<script>
-import HelloWorld from '@/components/HelloWorld.vue';
-import TheFooter from '@/components/TheFooter.vue';
+<script setup lang="ts">
+import HelloWorld from '../components/HelloWorld.vue';
+import TheFooter from '../components/TheFooter.vue';
 
-export default {
-  name: 'TheAbout',
-  components: {
-    TheFooter,
-    HelloWorld
-},
-  data(){
-    return {
 
-    }
-  }
-}
 </script>
 <style>
 </style>

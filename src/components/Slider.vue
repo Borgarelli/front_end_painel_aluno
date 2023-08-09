@@ -2,7 +2,7 @@
     <div class="slider-container">
       <div class="slider-track" ref="track" @touchstart="onTouchStart" @touchmove="onTouchMove" @touchend="onTouchEnd">
         <button class="slider-item" v-for="(item, index) in items" :key="index" :style="sliderItemStyle(index)">
-          <span class="slider-content">{{ item }}</span>
+          <p class="slider-content">{{ item }}</p>
         </button>
       </div>
     </div>
@@ -52,6 +52,7 @@
    .slider-container {
     overflow: hidden;
     width: 100%;
+    justify-content: space-between;
   }
   
   .slider-track {
@@ -68,6 +69,8 @@
     align-items: center;
     flex-shrink: 0;
     background: white;
+    border-radius: 8px;
+    background: var(--white, #FFF);
   }
 
   .slider-content {
@@ -80,10 +83,15 @@
     line-height: 120%;
   }
 
-  .slider-content:focus-visible {
+  .slider-item:focus {
     border-radius: 8px;
-    border: 5px solid #40CAC2;
+    border: 1px solid #40CAC2;
     background: #fff;
   }
+
+  .slider-item:active,
+  .slider-item:focus {
+    outline: none;
+}
   </style>
   

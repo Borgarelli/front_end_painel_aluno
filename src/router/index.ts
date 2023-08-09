@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HighlightsView from "../views/HighlightsView.vue";
 import AboutViewVue from "../views/AboutView.vue";
+import DestaquesView from "../views/DestaquesView.vue"
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     name: "highlights",
     component: HighlightsView,
   },
+  {
+    path: "/destaques",
+    name: "destaques",
+    component: DestaquesView
+  }
 ];
 
 export const router = createRouter({

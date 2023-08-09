@@ -1,5 +1,14 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <HelloWorld/>
+    <TheFooter/>
   </div>
 </template>
+<script setup lang="ts">
+import HelloWorld from '../components/HelloWorld.vue';
+import TheFooter from '../components/TheFooter.vue';
+
+
+</script>
+<style>
+</style>

@@ -1,6 +1,7 @@
 <template>
 <div class="user" @click="setUser">
     <PainelSection :label="user.name" :sublabel="user.group " img_path="../assets/layers.png">
+        <button class="btn"><span class="msg">Ver Desempenho</span></button>
     </PainelSection>
 </div>
 </template>
@@ -32,4 +33,28 @@ function setUser() {
     height: 100%;
 }
 
+.btn {
+    display: flex;
+    width: 50%;
+    height: 23px;
+    padding: 6px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #E8ECEF;
+    background: #FFF;
+}
+
+.msg{
+    color: #405261;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; 
+}
 </style>

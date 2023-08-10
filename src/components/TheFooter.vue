@@ -44,7 +44,7 @@
 }
 
 .footer-title {
-  color: var(--secondary-lead, #434E5B);
+  color: #434E5B;
   font-family: Nunito;
   font-size: 16px;
   font-weight: 600;
@@ -53,7 +53,7 @@
 }
 
 .footer-description {
-  color: var(--gray-70, #748494);
+  color: #748494;
   font-family: Nunito;
   font-size: 12px;
   font-weight: 400;

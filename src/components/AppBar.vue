@@ -35,6 +35,12 @@ import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { router } from "../router"
 
+defineProps<{
+  label?: string | undefined
+  sublabel?:string | undefined
+  img_path?: string
+}>()
+
 const route = useRoute()
 
 let currentLabel: string
@@ -92,10 +98,9 @@ nav .menu-item a {
 }
 
 img {
-    width: 18px;
-    height: 18px;
-    justify-content: center;
-    align-items: center;
+    color: var(--secondary-lead, #434E5B);
+    margin: 12px;
+    font-size: 26px;
 }
 
 .slide-fade-enter-active {

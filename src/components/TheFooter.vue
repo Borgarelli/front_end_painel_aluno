@@ -1,14 +1,14 @@
 <template>
-  <el-footer class="footer">
+  <div class="footer">
     <div class="footer-content">
-      <img class="layers" alt="layers" src="../assets/layers.png">
+      <img class="layers" alt="layers" src="../assets/Camada_1.png">
       <div class="footer-text">
-        <h2 class="footer-title">Nome do Aluno</h2>
-        <p class="footer-description">Descrição do aluno</p>
+        <h2 class="footer-title">Joãozinho</h2>
+        <p class="footer-description">1º turma B</p>
       </div>
       <img class="exit" alt="exit" src="../assets/portal-close.png">
     </div>
-  </el-footer>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -23,15 +23,18 @@
   background-color: white; 
   padding: 12px 0;
   box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
-  z-index: 999; 
+  z-index: 999;
+  border-radius: 12px 12px 0px 0px;
+  border: 1px solid #E8ECEF;
+  background: #FFF;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   max-width: 360px;
+  margin: 0 auto; /* Centralize o conteúdo horizontalmente */
   padding: 0 12px;
 }
 

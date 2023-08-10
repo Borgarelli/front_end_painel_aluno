@@ -34,7 +34,7 @@
 import { ref } from 'vue';
 
 import { useRoute } from 'vue-router';
-import { getUser, getUsersNames } from '../services/user';
+import { getMember, getMembersNames } from '../services/members';
 
 const route = useRoute()
 
@@ -43,10 +43,10 @@ let currentLabel: string
 if (route.name == "home") {
     currentLabel = "Visão Geral"
 } else {
-    currentLabel = (getUser(route.params.id as string)).name
+    currentLabel = (getMember(route.params.id as string)).name
 }
 
-const members = getUsersNames()
+const members = getMembersNames()
 
 let isOpen = ref(false)
 
@@ -105,4 +105,4 @@ img {
   opacity: 0;
 }
 
-</style>
+</style>../services/member

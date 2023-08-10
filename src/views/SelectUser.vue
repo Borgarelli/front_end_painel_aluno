@@ -1,7 +1,7 @@
 <template>
   <AppBar/>
-  <div id="users" v-for="user in users">
-    <UserButton :user=user></UserButton>
+  <div id="users" v-for="member in members">
+    <UserButton :user=member></UserButton>
     <TheFooter/>
     <RouterView/>
   </div>
@@ -11,13 +11,14 @@ import { ref, onMounted } from 'vue';
 import AppBar from '../components/AppBar.vue';
 import TheFooter from '../components/TheFooter.vue';
 import UserButton from '../components/UserButton.vue';
-import { getUsers } from '../services/user'
+import { getMembers } from '../services/members'
 
-const users = ref(getUsers())
+const members = ref(getMembers())
 
 onMounted( ()=> {
-  users.value
+  members.value
 })
 </script>
 <style scoped>
 </style>
+../services/member

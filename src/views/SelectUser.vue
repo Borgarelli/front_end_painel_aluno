@@ -2,7 +2,7 @@
   <AppBar/>
   <div id="users" v-for="user in users">
     <UserButton :user=user></UserButton>
-    <TheFooter/>
+    <TheFooter :user="user"/>
     <RouterView/>
   </div>
 </template>
@@ -11,6 +11,7 @@ import { ref, onMounted } from 'vue';
 import AppBar from '../components/AppBar.vue';
 import TheFooter from '../components/TheFooter.vue';
 import UserButton from '../components/userButton.vue';
+import { getUsers } from '../services/user';
 
 
 const users = ref(getUsers())

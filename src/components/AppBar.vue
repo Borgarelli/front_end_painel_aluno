@@ -36,6 +36,12 @@ import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { getUser } from '../services/user';
 
+defineProps<{
+  label?: string | undefined
+  sublabel?:string | undefined
+  img_path?: string
+}>()
+
 const route = useRoute()
 
 let currentLabel

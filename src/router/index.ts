@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HighlightsView from "../views/HighlightsView.vue";
 import SelectUser from "../views/SelectUser.vue";
 
+
 const routes = [
   {
     path: "/",

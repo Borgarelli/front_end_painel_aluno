@@ -57,6 +57,7 @@ defineProps<{
 }
 
 .body {
+  display: flex;
   text-align: center;
   justify-content: center;
 }

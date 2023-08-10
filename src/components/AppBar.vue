@@ -83,10 +83,9 @@ nav .menu-item a {
 }
 
 img {
-    width: 18px;
-    height: 18px;
-    justify-content: center;
-    align-items: center;
+    color: var(--secondary-lead, #434E5B);
+    margin: 12px;
+    font-size: 26px;
 }
 
 .slide-fade-enter-active {

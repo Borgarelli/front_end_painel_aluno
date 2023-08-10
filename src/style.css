@@ -43,6 +43,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   background-color: #F3F4F5;
+  
 }
 
 .card {

@@ -11,7 +11,7 @@ import { ref, onMounted } from 'vue';
 import AppBar from '../components/AppBar.vue';
 import TheFooter from '../components/TheFooter.vue';
 import UserButton from '../components/userButton.vue';
-import { getUsers } from '../services/user'
+
 
 const users = ref(getUsers())
 

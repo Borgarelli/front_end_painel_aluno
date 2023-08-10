@@ -8,9 +8,8 @@
 </template>
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import AppBar from '../components/AppBar.vue';
 import TheFooter from '../components/TheFooter.vue';
-import UserButton from '../components/UserButton.vue';
+import UserButton from '../components/userButton.vue';
 
 const users = ref([
     {
@@ -22,7 +21,8 @@ const users = ref([
     {
       _id: "2",
       name: "Joana",
-      group: "1 ano - Turma B"
+      group: "1 ano - Turma B",
+      img_path: "../assets/layers.png"
     }
   ])
 
@@ -31,4 +31,7 @@ onMounted( ()=> {
 })
 </script>
 <style scoped>
+#users{
+  margin-top: 10px;
+}
 </style>

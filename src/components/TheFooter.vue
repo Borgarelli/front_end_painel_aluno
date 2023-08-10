@@ -3,8 +3,8 @@
     <div class="footer-content">
       <img class="layers" alt="layers" src="../assets/layers.png">
       <div class="footer-text">
-        <h2 class="footer-title">Nome do Aluno</h2>
-        <p class="footer-description">Descrição do aluno</p>
+        <h2 class="footer-title">{{ label }}</h2>
+        <p class="footer-description">{{ sublabel }}</p>
       </div>
       <img class="exit" alt="exit" src="../assets/portal-close.png">
     </div>
@@ -12,6 +12,14 @@
 </template>
 
 <script setup lang="ts">
+
+defineProps<{
+  label?: string | undefined
+  sublabel?:string | undefined
+}>()
+
+
+
 </script>
 
 <style scoped>

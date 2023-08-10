@@ -1,14 +1,19 @@
 <template>
     <div class="section">
-        <div class="title">
-          {{ label }}
-          <div class="subtitle">
+      <div class="section-content">
+        <img class="img" alt="user" src="../assets/Component 1.png"/>
+        <div class="section-title">
+          <div class="section-text">
+            <div class="section-subtitle">
             {{ sublabel }}
             <div class="body">
-              <slot></slot>
+              <slot name="name">{{ label }}</slot>
+              <slot name="group">{{ sublabel }}</slot>
             </div>
           </div>
+          </div>
         </div>
+      </div>
     </div>
 </template>
 
@@ -20,35 +25,86 @@ defineProps<{
 
 </script>
 
-<style>
+<style scoped>
 .section {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  background-color: #FFF;
-  border-radius: .5em;
-  padding: 1em;
-  margin: 1em 15vw 1em 15vw;
+  align-items: flex-start;
+  gap: 4px;
 }
 
-.title {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  font-size: 1.1em;
-  font-weight: 600;
-  color: var(--label);
-  margin-bottom: 1em;
+/* .title {
+    color: #434E5B;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 4px;
 }
 
-.subtitle {
-  display: flex;
-  flex-direction: column;
-  font-size: .7em;
-  color: var(--sublabel)
-}
+.section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 360px;
+    padding: 0 12px;
+} */
+
+/* .subtitle {
+  color: #A3B1BF;
+  font-family: Nunito;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+} */
 
 .body {
-  text-align: center;
+  display: flex;
+  width: 230px;
+  height: 20px;
+  flex-direction: column;
   justify-content: center;
+  color: red;
+}
+
+.section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 360px;
+  padding: 0 12px;
+}
+
+.section-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  margin-left: 16px;
+}
+
+.section-title {
+  color: var(--secondary-lead, #434E5B);
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 4px;
+}
+
+.section-subtitle {
+  color: var(--gray-70, #748494);
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.img {
+  width: 40px;
+  height: 40px;
 }
 </style>

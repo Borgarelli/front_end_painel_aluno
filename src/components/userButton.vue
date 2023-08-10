@@ -1,7 +1,12 @@
 <template>
 <button class="user" @click="setUser">
     <PainelSection>
-        {{ user.name }}
+        <template v-slot:name>
+            {{ user.name }}
+        </template>
+        <template v-slot:group>
+            {{ user.group }}
+        </template>
     </PainelSection>
 </button>
 </template>
@@ -28,8 +33,12 @@ function setUser() {
 <style scoped>
 
 .user {
-    width: 100%;
-    height: 100%;
+    width: 358px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #E8ECEF;
+    background: #FFF;
 }
 
 </style>

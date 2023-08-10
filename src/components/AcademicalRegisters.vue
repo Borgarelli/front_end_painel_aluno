@@ -1,16 +1,16 @@
 <template>
     <div class="main1">
        <div class="group">
-               <img class="img" src="../assets/registers.png" alt="registros">
+               <img class="img" src="{{img_path}}" alt="registros">
            <div class="text-header-main1">
-               <span class="title">Registros Acadêmicos</span>
+               <span class="title">{{ title }}</span>
            </div> 
        </div>
-       <div class="subtitle"><span class="subtitle-content">Olha, você têm um novo registro 😉</span></div>
+       <div class="subtitle"><span class="subtitle-content">{{subtitle}}</span></div>
        <div class="linha"/>
        <div class="subtitle">
         <span class="subtitle-content">
-            Não trouxe material para aula
+            {{ content }}
         </span>
         <span class="date">12 de julho</span>
        </div>
@@ -20,6 +20,12 @@
    </div>
 </template>
 <script setup lang="ts">
+defineProps<{
+  title: string 
+  subtitle:string 
+  content: string 
+  img_path: string
+}>()
 </script>
 
 <style scoped>

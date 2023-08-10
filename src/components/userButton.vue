@@ -1,6 +1,6 @@
 <template>
 <button class="user" @click="setUser">
-    <PainelSection>
+    <PainelSection :label="user.name" :sublabel="user.group " img_path="../assets/layers.png">
         {{ user.name }}
     </PainelSection>
 </button>
@@ -15,7 +15,8 @@ const props = defineProps<{
     user: {
         _id: string,
         name: string,
-        group: string
+        group: string,
+        img_path?: string
     }
 }>()
 

@@ -1,13 +1,16 @@
 <template>
     <div class="section">
         <div class="title">
-          {{ label }}
+          <div v-if="img_path">
+            <img :src="img_path"/>
+          </div>
+           {{ label }}
           <div class="subtitle">
             {{ sublabel }}
-            <div class="body">
-              <slot></slot>
-            </div>
           </div>
+        </div>
+        <div class="body">
+          <slot></slot>
         </div>
     </div>
 </template>
@@ -16,6 +19,7 @@
 defineProps<{
   label?: string | undefined
   sublabel?:string | undefined
+  img_path?: string
 }>()
 
 </script>

@@ -1,14 +1,8 @@
 <template>
-<button class="user" @click="setUser">
+<div class="user" @click="setUser">
     <PainelSection :label="user.name" :sublabel="user.group " img_path="../assets/layers.png">
-        {{ user.name }}
-        <PainelSection label="Olha você">
-            Qualquer texto cabe
-            <button>clicar aqui</button>
-        </PainelSection>
-
     </PainelSection>
-</button>
+</div>
 </template>
 
 <script setup lang="ts">

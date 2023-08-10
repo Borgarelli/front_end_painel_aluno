@@ -1,7 +1,7 @@
 <template>
 <div class="app">
     <AppBar/>
-
+    <AcademicalRegisters/>
     <TermsBar :terms="terms"/>
     <TheFooter/>
 </div>
@@ -12,6 +12,7 @@ import { ref, onMounted } from 'vue';
 import AppBar  from '../components/AppBar.vue';
 import TermsBar from '../components/TermsBar.vue';
 import TheFooter from '../components/TheFooter.vue';
+import AcademicalRegisters from '../components/AcademicalRegisters.vue';
 
 const terms = ref([
     // '1º Bimestre',

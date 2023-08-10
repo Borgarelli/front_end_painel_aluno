@@ -19,3 +19,7 @@ export const getUsers = () => {
 export const getUser = (id: string) => {
   return users.find((user) => user._id === id);
 };
+
+export const getUsersNames = () => {
+  return users.map((user) => user.name);
+};

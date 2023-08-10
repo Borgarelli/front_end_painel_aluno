@@ -14,8 +14,8 @@
                             <RouterLink to="/"> Visão Geral </RouterLink>
                             <img alt="sandwich-menu" src="../assets/menu.png">
                         </div>
-                        <div class="menu-item" >
-                            <RouterLink to="/studentPainel/1"> member </RouterLink>
+                        <div class="menu-item" v-for="member in members">
+                            <RouterLink to="/studentPainel/1"> {{ member }} </RouterLink>
                             <img alt="sandwich-menu" src="../assets/menu.png">
                         </div>
                     </div>
@@ -34,17 +34,19 @@
 import { ref } from 'vue';
 
 import { useRoute } from 'vue-router';
-import { getUser } from '../services/user';
+import { getUser, getUsersNames } from '../services/user';
 
 const route = useRoute()
 
-let currentLabel
+let currentLabel: string
 
 if (route.name == "home") {
     currentLabel = "Visão Geral"
 } else {
-    currentLabel = (getUser(route.params.id as string))?.name
+    currentLabel = (getUser(route.params.id as string)).name
 }
+
+const members = getUsersNames()
 
 let isOpen = ref(false)
 

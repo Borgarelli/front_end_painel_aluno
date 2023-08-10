@@ -1,0 +1,97 @@
+<template>
+    <div class="appbar-menu" @click="clicked()">
+        <nav>
+            <div class="menu-item" v-if="!isOpen">
+                <a href="#">Visão Geral</a>
+
+                <img alt="sandwich-menu" src="../assets/menu.png">
+            </div>
+            <div class="sub-items"  v-else>
+                <Transition name="slide-fade">
+                    <div>
+                        <div class="menu-item">
+                            <!-- <Transition name="fade" appear> -->
+                            <RouterLink to="/"> Visão Geral </RouterLink>
+                            <img alt="sandwich-menu" src="../assets/menu.png">
+                        </div>
+                        <div class="menu-item">
+                            <RouterLink to="/studentPainel/1"> Joãozinho </RouterLink>
+                            <img alt="sandwich-menu" src="../assets/menu.png">
+                        </div>
+                        <div class="menu-item">
+                            <RouterLink to="/studentPainel/2"> Joana</RouterLink>
+                            <img alt="sandwich-menu" src="../assets/menu.png">
+                        </div>
+                    </div>
+                </Transition>
+
+
+            <!-- </Transition> -->
+        </div>
+    </nav>
+</div>
+
+</template>
+
+<script setup lang="ts">
+
+import { ref } from 'vue';
+
+let isOpen = ref(false)
+
+let clicked = () => {
+    isOpen.value = !isOpen.value
+}
+
+</script>
+
+<style scoped>
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    align-items: center;
+    width: 100vw;
+}
+
+nav .menu-item {
+    width: 90%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    color: var(--gray-80);
+    padding: 25px 40px;
+    position: relative;
+    border-bottom: 5px solid transparent;
+    transition: 0.4s;
+}
+
+nav .menu-item.active,
+nav .menu-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+    width: 18px;
+    height: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+</style>

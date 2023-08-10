@@ -3,12 +3,18 @@
         <div>
             <h1></h1>
             <PainelSection label="kcte" sublabel="pqp"> </PainelSection>
+            <TermsBar/>
         </div>
     </div>
     </template>
 
     <script setup lang="ts">
-    import PainelSection from  '../components/PainelSection.vue'
+    import { onMounted } from 'vue';
+import PainelSection from  '../components/PainelSection.vue'
+
+    onMounted(() => {
+
+    })
     </script>
 
     <style>

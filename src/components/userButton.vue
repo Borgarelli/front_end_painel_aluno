@@ -1,6 +1,6 @@
 <template>
 <div class="user" @click="setUser">
-    <PainelSection :label="user.name" :sublabel="user.group " img_path="../assets/layers.png">
+    <PainelSection :label="member.name" :sublabel="member.group " :img_path="img_path">
     </PainelSection>
 </div>
 </template>
@@ -11,16 +11,19 @@ import PainelSection from './PainelSection.vue';
 
 
 const props = defineProps<{
-    user: {
+    member: {
         _id: string,
         name: string,
         group: string,
-        img_path?: string
-    }
+    },
+    img_path?: string
 }>()
 
 function setUser() {
-    router.push(`/studentPainel/${props.user._id}`)
+    localStorage.setItem('currentMember', JSON.stringify(props.member))
+
+    router.push(`/studentPainel/${props.member._id}`)
+
 }
 
 </script>

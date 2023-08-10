@@ -15,7 +15,8 @@
                             <img alt="sandwich-menu" src="../assets/menu.png">
                         </div>
                         <div class="menu-item" v-for="member in members">
-                            <RouterLink to="/studentPainel/1"> {{ member }} </RouterLink>
+                            <!-- <RouterLink :to="{name: 'studentpainel', params: {'id': member._id}}"> {{ member.name }} </RouterLink> -->
+                            <a @click="setMember(member)"> {{ member.name }}</a>
                             <img alt="sandwich-menu" src="../assets/menu.png">
                         </div>
                     </div>
@@ -30,28 +31,34 @@
 </template>
 
 <script setup lang="ts">
-
 import { ref } from 'vue';
-
 import { useRoute } from 'vue-router';
-import { getMember, getMembersNames } from '../services/members';
+import { router } from "../router"
 
 const route = useRoute()
 
 let currentLabel: string
+const currentMember = JSON.parse(localStorage.getItem('currentMember') as string)
+const members = JSON.parse(localStorage.getItem('members') as string)
 
 if (route.name == "home") {
     currentLabel = "Visão Geral"
 } else {
-    currentLabel = (getMember(route.params.id as string)).name
+    currentLabel = currentMember.name
+    console.log(currentLabel)
 }
 
-const members = getMembersNames()
 
 let isOpen = ref(false)
 
 let clicked = () => {
     isOpen.value = !isOpen.value
+}
+
+function setMember(member) {
+    localStorage.setItem('currentMember', JSON.stringify(member))
+    router.push({name: 'studentpainel', params: {'id': member._id}})
+    currentLabel = member.name
 }
 
 </script>

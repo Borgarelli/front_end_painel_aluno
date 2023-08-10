@@ -1,14 +1,16 @@
 <template>
     <div class="terms">
         <el-tabs v-model="activeTerm" class="tabs" @tab-click="handleClick">
-            <el-tab-pane :label="term.term" :name="term.order" class="customTabClass" v-for="term in terms">
-                <div class="latest-news">
-                    Últimas Atualizações
-                </div>
-                <div class="">
-                    <PainelSectionVue label="História">
-                        {{ term.term }}
-                    </PainelSectionVue>
+            <el-tab-pane :label="term" :name="term" class="customTabClass" v-for="term in terms">
+                <div class="panel">
+                    <div class="latest-news">
+                        Últimas Atualizações
+                    </div>
+                    <div class="">
+                        <PainelSectionVue label="História">
+                            {{ term }}
+                        </PainelSectionVue>
+                    </div>
                 </div>
             </el-tab-pane>
         </el-tabs>
@@ -21,26 +23,20 @@ import type { TabsPaneContext } from 'element-plus'
 import PainelSectionVue from './PainelSection.vue';
 import { ref } from 'vue';
 
-const props = defineProps<{
-    terms:{
-        term: string,
-        order: string
-    }[],
+defineProps<{
+    terms: string[],
 }>()
 
 const handleClick = (tab: TabsPaneContext, event: Event) => {
   console.log(tab, event)
 }
 
-const activeTerm = ref("1")
+const activeTerm = ref("3º Bimestre")
+
+
 </script>
 
 <style>
-
-.--el-tabs {
-    background-color: red !important;
-
-}
 
 .el-tabs__nav{
     gap: 8px !important;
@@ -68,9 +64,15 @@ const activeTerm = ref("1")
     background-color: var(--selected) !important;
 }
 
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+}
+
 .latest-news {
     display: flex;
-    justify-content: left;
+    text-align: left;
     padding: 16px 0 24px 16px;
 
     color: var(--selected);

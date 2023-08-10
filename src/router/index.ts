@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HighlightsView from "../views/HighlightsView.vue";
+import StudentPanel from "../views/StudentPanel.vue";
 import SelectUser from "../views/SelectUser.vue";
 
 const routes = [
@@ -10,8 +10,8 @@ const routes = [
   },
   {
     path: "/studentPainel/:id",
-    name: "highlights",
-    component: HighlightsView,
+    name: "studentpainel",
+    component: StudentPanel,
   },
 ];
 

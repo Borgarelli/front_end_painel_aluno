@@ -2,7 +2,7 @@
     <div class="appbar-menu" @click="clicked()">
         <nav>
             <div class="menu-item" v-if="!isOpen">
-                <a href="#">Visão Geral</a>
+                <a href="#">{{ currentLabel }}</a>
 
                 <img alt="sandwich-menu" src="../assets/menu.png">
             </div>
@@ -14,12 +14,8 @@
                             <RouterLink to="/"> Visão Geral </RouterLink>
                             <img alt="sandwich-menu" src="../assets/menu.png">
                         </div>
-                        <div class="menu-item">
-                            <RouterLink to="/studentPainel/1"> Joãozinho </RouterLink>
-                            <img alt="sandwich-menu" src="../assets/menu.png">
-                        </div>
-                        <div class="menu-item">
-                            <RouterLink to="/studentPainel/2"> Joana</RouterLink>
+                        <div class="menu-item" >
+                            <RouterLink to="/studentPainel/1"> member </RouterLink>
                             <img alt="sandwich-menu" src="../assets/menu.png">
                         </div>
                     </div>
@@ -36,6 +32,19 @@
 <script setup lang="ts">
 
 import { ref } from 'vue';
+
+import { useRoute } from 'vue-router';
+import { getUser } from '../services/user';
+
+const route = useRoute()
+
+let currentLabel
+
+if (route.name == "home") {
+    currentLabel = "Visão Geral"
+} else {
+    currentLabel = (getUser(route.params.id as string))?.name
+}
 
 let isOpen = ref(false)
 

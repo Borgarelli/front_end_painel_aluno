@@ -9,10 +9,13 @@
        <div class="subtitle"><span class="subtitle-content">{{subtitle}}</span></div>
        <div class="linha"/>
        <div class="subtitle">
-        <span class="subtitle-content">
-            {{ content }}
-        </span>
-        <span class="date">12 de julho</span>
+            <span class="subtitle-content">
+                {{ content }}
+            </span>
+            <span v-if="note" class="note">
+                {{ note }}
+            </span>
+            <span  v-if="data" class="date">{{data}}</span>
        </div>
        <div class="body">
         <slot></slot>
@@ -24,7 +27,9 @@ defineProps<{
   title: string
   subtitle:string
   content: string
+  data?: string | undefined
   img_path: string
+  note?: string | undefined
 }>()
 </script>
 
@@ -91,6 +96,16 @@ defineProps<{
     line-height: 100%; /* 12px */
 }
 
+.note {
+    position: absolute;
+    right: 10px;
+    color:  #ED6B4F;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; 
+}
 
 .img {
    width: 30px;

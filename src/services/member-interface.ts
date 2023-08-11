@@ -8,6 +8,7 @@ export interface Avaliacoes {
   studentGrade: number;
   averageClass: number;
   maximumTestScore: number;
+  notification: Notification;
 }
 
 export interface Course {
@@ -33,5 +34,4 @@ export interface StudentPanel {
   codigoAluno: number;
   name: string;
   terms: Term[];
-  statement: any; // ou defina o tipo apropriado para 'statement'
 }

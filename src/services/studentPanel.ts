@@ -417,3 +417,23 @@ export const getTerms = () => {
 export const getTermsName = () => {
   return studentPanel.terms.map((term) => term.term_name);
 };
+
+export const getStatusPerSubject = () => {
+  return studentPanel.terms.map((term) => {
+    const subjectPerTerm: any = {};
+    subjectPerTerm[term.term_name] = term.courses.map((course) => {
+      const statusPerSubject: any = {};
+      statusPerSubject[course.course_name] = {
+        attendance: {
+          freq: course.freq,
+          incidence: course.incidence,
+          notification: course.notification,
+        },
+        grade: course.avaliacoes,
+        registers: course.tarefas,
+      };
+      return statusPerSubject;
+    });
+    return subjectPerTerm;
+  });
+};

@@ -7,10 +7,10 @@
 </template>
 <script setup lang="ts">
 import AcademicalRegisters from './AcademicalRegisters.vue';
-import registers from '@/assets/registers.png'
-import grades from '@/assets/layers.png'
-import attendance from '@/assets/menu.png'
-import lecture from '@/assets/registers.png'
+import registers from '../assets/registers.png'
+import grades from '../assets/layers.png'
+import attendance from '../assets/menu.png'
+import lecture from '../assets/registers.png'
 
 // const selectedSubjects = JSON.parse(localStorage.getItem('selectedItem'))
 

@@ -8,20 +8,20 @@
     </div>
     </template>
 
-    <script setup lang="ts">
-    import { onMounted } from 'vue';
+<script setup lang="ts">
+import { onMounted } from 'vue';
 import PainelSection from  '../components/PainelSection.vue'
 
     onMounted(() => {
 
     })
-    </script>
+</script>
 
-    <style>
+<style>
     .app {
         display: flex;
         flex-direction: column;
         width: 100vw;
         height: 100vh;
     }
-    </style>
+</style>

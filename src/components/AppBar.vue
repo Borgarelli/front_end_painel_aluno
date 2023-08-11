@@ -1,32 +1,24 @@
 <template>
-    <div class="appbar-menu" @click="clicked()">
-        <nav>
-            <div class="menu-item" v-if="!isOpen">
+        <nav @click="clicked()">
+            <div class="menu-item" v-show="!isOpen">
                 <a href="#">{{ currentLabel }}</a>
-
-                <img alt="sandwich-menu" src="../assets/menu.png">
+                <img alt="sandwich-menu" src="@/assets/sanduiche.svg">
             </div>
-            <div class="sub-items"  v-else>
-                <Transition name="slide-fade">
-                    <div>
-                        <div class="menu-item">
-                            <!-- <Transition name="fade" appear> -->
-                            <RouterLink to="/"> Visão Geral </RouterLink>
-                            <img alt="sandwich-menu" src="../assets/menu.png">
-                        </div>
-                        <div class="menu-item" v-for="member in members">
-                            <!-- <RouterLink :to="{name: 'studentpainel', params: {'id': member._id}}"> {{ member.name }} </RouterLink> -->
-                            <a @click="setMember(member)"> {{ member.name }}</a>
-                            <img alt="sandwich-menu" src="../assets/menu.png">
-                        </div>
+            <!-- <Transition name="slide"> -->
+                <div class="sub-items" v-show="isOpen">
+                    <div class="menu-item">
+                        <!-- <Transition name="fade" appear> -->
+                        <RouterLink to="/"> Visão Geral </RouterLink>
+                        <img alt="sandwich-menu" src="@/assets/sanduiche.svg">
                     </div>
-                </Transition>
-
-
+                    <div class="menu-item" v-for="member in members">
+                        <!-- <RouterLink :to="{name: 'studentpainel', params: {'id': member._id}}"> {{ member.name }} </RouterLink> -->
+                        <a @click="setMember(member)"> {{ member.name }}</a>
+                        <!-- <img alt="sandwich-menu" src="@/assets/sanduiche.png"> -->
+                    </div>
+                </div>
             <!-- </Transition> -->
-        </div>
     </nav>
-</div>
 
 </template>
 
@@ -76,20 +68,38 @@ nav {
     display: flex;
     flex-direction: row;
     background-color: white;
-    align-items: center;
+    justify-content: space-between;
     width: 100vw;
 }
 
-nav .menu-item {
-    width: 90%;
+a {
+    cursor: pointer;
+}
+
+.menu-item {
+    width: 100%;
+    height: 36px;
     display: flex;
-    align-items: left;
-    justify-content: left;
+    justify-content: space-between;
+    align-items: center;
     color: var(--gray-80);
-    padding: 25px 40px;
+    padding: 10px;
     position: relative;
-    border-bottom: 5px solid transparent;
     transition: 0.4s;
+}
+
+.sub-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+    color: var(--gray-80);
+    transition: 0.4s;
+}
+
+.sub-items .menu-item {
+    padding: 0px
 }
 
 nav .menu-item.active,
@@ -99,24 +109,41 @@ nav .menu-item a {
 }
 
 img {
-    width: 18px;
-    height: 18px;
-    justify-content: center;
-    align-items: center;
+    color: var(--secondary-lead, #434E5B);
+    margin: 12px;
+    font-size: 26px;
 }
 
-.slide-fade-enter-active {
-  transition: all 0.3s ease-out;
+/* .slide-enter-active {
+   -moz-transition-duration: 0.3s;
+   -webkit-transition-duration: 0.3s;
+   -o-transition-duration: 0.3s;
+   transition-duration: 0.3s;
+   -moz-transition-timing-function: ease-in;
+   -webkit-transition-timing-function: ease-in;
+   -o-transition-timing-function: ease-in;
+   transition-timing-function: ease-in;
 }
 
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+.slide-leave-active {
+   -moz-transition-duration: 0.3s;
+   -webkit-transition-duration: 0.3s;
+   -o-transition-duration: 0.3s;
+   transition-duration: 0.3s;
+   -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+   -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+   -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
+.slide-enter-to, .slide-leave {
+   max-height: 100px;
+   overflow: hidden;
 }
 
-</style>../services/member
+.slide-enter, .slide-leave-to {
+   overflow: hidden;
+   max-height: 0;
+} */
+
+</style>

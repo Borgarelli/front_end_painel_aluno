@@ -6,10 +6,9 @@
                     <div class="latest-news">
                         Últimas Atualizações
                     </div>
-                    <div class="">
-                        <PainelSectionVue label="História">
-                            {{ term }}
-                        </PainelSectionVue>
+                    <div class="" v-for="subject in currentBimestreData">
+
+                        <CompButtons></CompButtons>
                     </div>
                 </div>
             </el-tab-pane>
@@ -20,8 +19,9 @@
 <script setup lang="ts">
 
 import type { TabsPaneContext } from 'element-plus'
-import PainelSectionVue from './PainelSection.vue';
-import { ref } from 'vue';
+import { getStatusPerSubject } from '../services/studentPanel.ts'
+import CompButtons from './CompButtons.vue'
+import { ref, computed } from 'vue';
 
 defineProps<{
     terms: string[],
@@ -32,15 +32,31 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
 }
 
 const activeTerm = ref("3º Bimestre")
+const bimestresData = getStatusPerSubject()
+
+const currentBimestreData = computed( () => {
+    const foundBimestre = bimestresData.find((bimestre) => Object.keys(bimestre)[0] === activeTerm.value)
+    const subjects = foundBimestre[activeTerm.value]
+    return subjects
+})
+
+
 
 
 </script>
 
-<style scoped>
+<style>
 
 .el-tabs__nav{
     gap: 8px !important;
+    width: 100% !important;
+    margin: 0px 10px 5px 10px !important;
+    overflow-x: scroll !important;
 }
+
+.el-tabs__nav::-webkit-scrollbar{
+    display: none;
+  }
 
 .el-tabs__nav-wrap {
     display: flex !important;
@@ -62,6 +78,10 @@ const activeTerm = ref("3º Bimestre")
 .el-tabs__item.is-active {
     color: white !important;
     background-color: var(--selected) !important;
+}
+
+.el-tabs__active-bar , .el-tabs__nav-prev, .el-tabs__nav-next {
+    display: none !important;
 }
 
 .panel {

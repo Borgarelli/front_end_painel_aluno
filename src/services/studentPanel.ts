@@ -2,70 +2,104 @@ import { StudentPanel } from "./member-interface";
 
 const [studentPanel]: StudentPanel[] = [
   {
-    codigoAluno: 3,
-    name: "Juliana Bueno Silva",
+    codigoAluno: 1,
+    name: "Paulo Freitas",
     terms: [
       {
         term_name: "1º Bimestre",
         courses: [
           {
             course_name: "Matemática",
-            freq: 77,
-            incidence: 13,
+            freq: 67,
+            incidence: 25,
+            notification: {
+              key: 0,
+              message: "Atenção, você está quase atingindo o limite de faltas",
+            },
             tarefas: {
-              average_tasks_per_class: 9,
-              tasks_assigned: 10,
-              tasks_completed: 4,
+              average_tasks_per_class: 5,
+              tasks_assigned: 9,
+              tasks_completed: 1,
             },
             avaliacoes: {
-              studentGrade: 7.119,
-              averageClass: 6.675,
+              studentGrade: 5.628,
+              averageClass: 2.588,
               maximumTestScore: 0,
+              notification: {
+                key: 1,
+                message: "Eba, sua nota está dentro da média",
+              },
             },
           },
           {
             course_name: "História",
-            freq: 70,
-            incidence: 15,
+            freq: 99,
+            incidence: 5,
+            notification: {
+              key: 2,
+              message:
+                "Eba, sua presença em aulas está constante.\nContinue assim",
+            },
             tarefas: {
-              average_tasks_per_class: 9,
-              tasks_assigned: 6,
-              tasks_completed: 8,
+              average_tasks_per_class: 8,
+              tasks_assigned: 9,
+              tasks_completed: 4,
             },
             avaliacoes: {
-              studentGrade: 5.855,
-              averageClass: 6.333,
+              studentGrade: 1,
+              averageClass: 1,
               maximumTestScore: 0,
+              notification: {
+                key: 0,
+                message: "Poxa, sua nota está abaixo da média",
+              },
             },
           },
           {
             course_name: "Português",
-            freq: 87,
+            freq: 91,
             incidence: 7,
+            notification: {
+              key: 2,
+              message:
+                "Eba, sua presença em aulas está constante.\nContinue assim",
+            },
             tarefas: {
-              average_tasks_per_class: 5,
+              average_tasks_per_class: 8,
               tasks_assigned: 10,
-              tasks_completed: 0,
+              tasks_completed: 3,
             },
             avaliacoes: {
-              studentGrade: 8.232,
-              averageClass: 9.803,
+              studentGrade: 4.821,
+              averageClass: 6.724,
               maximumTestScore: 0,
+              notification: {
+                key: 0,
+                message: "Poxa, sua nota está abaixo da média",
+              },
             },
           },
           {
             course_name: "Geografia",
-            freq: 97,
-            incidence: 9,
+            freq: 65,
+            incidence: 25,
+            notification: {
+              key: 0,
+              message: "Atenção, você está quase atingindo o limite de faltas",
+            },
             tarefas: {
               average_tasks_per_class: 6,
-              tasks_assigned: 10,
-              tasks_completed: 1,
+              tasks_assigned: 8,
+              tasks_completed: 3,
             },
             avaliacoes: {
-              studentGrade: 7.254,
-              averageClass: 9.006,
+              studentGrade: 2.41,
+              averageClass: 1,
               maximumTestScore: 0,
+              notification: {
+                key: 0,
+                message: "Poxa, sua nota está abaixo da média",
+              },
             },
           },
         ],
@@ -75,62 +109,95 @@ const [studentPanel]: StudentPanel[] = [
         courses: [
           {
             course_name: "Matemática",
-            freq: 83,
-            incidence: 6,
+            freq: 88,
+            incidence: 9,
+            notification: {
+              key: 2,
+              message:
+                "Eba, sua presença em aulas está constante.\nContinue assim",
+            },
             tarefas: {
-              average_tasks_per_class: 7,
-              tasks_assigned: 8,
-              tasks_completed: 4,
+              average_tasks_per_class: 6,
+              tasks_assigned: 6,
+              tasks_completed: 5,
             },
             avaliacoes: {
-              studentGrade: 9.131,
-              averageClass: 7.995,
+              studentGrade: 3.457,
+              averageClass: 7.69,
               maximumTestScore: 0,
+              notification: {
+                key: 0,
+                message: "Poxa, sua nota está abaixo da média",
+              },
             },
           },
           {
             course_name: "História",
-            freq: 72,
+            freq: 73,
             incidence: 10,
+            notification: {
+              key: 0,
+              message: "Atenção, você está quase atingindo o limite de faltas",
+            },
             tarefas: {
-              average_tasks_per_class: 9,
-              tasks_assigned: 6,
-              tasks_completed: 8,
+              average_tasks_per_class: 5,
+              tasks_assigned: 10,
+              tasks_completed: 0,
             },
             avaliacoes: {
-              studentGrade: 4.155,
-              averageClass: 6.311,
+              studentGrade: 1,
+              averageClass: 7.617,
               maximumTestScore: 0,
+              notification: {
+                key: 0,
+                message: "Poxa, sua nota está abaixo da média",
+              },
             },
           },
           {
             course_name: "Português",
-            freq: 68,
+            freq: 67,
             incidence: 25,
+            notification: {
+              key: 0,
+              message: "Atenção, você está quase atingindo o limite de faltas",
+            },
             tarefas: {
               average_tasks_per_class: 6,
-              tasks_assigned: 9,
-              tasks_completed: 2,
+              tasks_assigned: 7,
+              tasks_completed: 4,
             },
             avaliacoes: {
-              studentGrade: 9.293,
-              averageClass: 1,
+              studentGrade: 5.792,
+              averageClass: 4.359,
               maximumTestScore: 0,
+              notification: {
+                key: 1,
+                message: "Eba, sua nota está dentro da média",
+              },
             },
           },
           {
             course_name: "Geografia",
-            freq: 91,
-            incidence: 9,
+            freq: 63,
+            incidence: 25,
+            notification: {
+              key: 0,
+              message: "Atenção, você está quase atingindo o limite de faltas",
+            },
             tarefas: {
-              average_tasks_per_class: 7,
+              average_tasks_per_class: 5,
               tasks_assigned: 9,
-              tasks_completed: 3,
+              tasks_completed: 1,
             },
             avaliacoes: {
-              studentGrade: 2.309,
-              averageClass: 7.838,
+              studentGrade: 4.811,
+              averageClass: 6.386,
               maximumTestScore: 0,
+              notification: {
+                key: 0,
+                message: "Poxa, sua nota está abaixo da média",
+              },
             },
           },
         ],
@@ -140,62 +207,97 @@ const [studentPanel]: StudentPanel[] = [
         courses: [
           {
             course_name: "Matemática",
-            freq: 97,
-            incidence: 6,
+            freq: 86,
+            incidence: 8,
+            notification: {
+              key: 2,
+              message:
+                "Eba, sua presença em aulas está constante.\nContinue assim",
+            },
             tarefas: {
-              average_tasks_per_class: 7,
-              tasks_assigned: 6,
-              tasks_completed: 6,
+              average_tasks_per_class: 8,
+              tasks_assigned: 9,
+              tasks_completed: 4,
             },
             avaliacoes: {
-              studentGrade: 1,
-              averageClass: 7.089,
+              studentGrade: 4.81,
+              averageClass: 6.512,
               maximumTestScore: 0,
+              notification: {
+                key: 0,
+                message: "Poxa, sua nota está abaixo da média",
+              },
             },
           },
           {
             course_name: "História",
-            freq: 97,
-            incidence: 8,
+            freq: 78,
+            incidence: 10,
+            notification: {
+              key: 2,
+              message:
+                "Eba, sua presença em aulas está constante.\nContinue assim",
+            },
             tarefas: {
-              average_tasks_per_class: 7,
+              average_tasks_per_class: 8,
               tasks_assigned: 9,
-              tasks_completed: 3,
+              tasks_completed: 4,
             },
             avaliacoes: {
-              studentGrade: 9.113,
-              averageClass: 1,
+              studentGrade: 9.158,
+              averageClass: 6.193,
               maximumTestScore: 0,
+              notification: {
+                key: 2,
+                message: "Eba, sua nota está dentro da média",
+              },
             },
           },
           {
             course_name: "Português",
-            freq: 70,
-            incidence: 16,
+            freq: 92,
+            incidence: 8,
+            notification: {
+              key: 2,
+              message:
+                "Eba, sua presença em aulas está constante.\nContinue assim",
+            },
             tarefas: {
-              average_tasks_per_class: 7,
+              average_tasks_per_class: 6,
               tasks_assigned: 6,
-              tasks_completed: 6,
+              tasks_completed: 5,
             },
             avaliacoes: {
-              studentGrade: 7.285,
-              averageClass: 5.968,
+              studentGrade: 7.294,
+              averageClass: 1,
               maximumTestScore: 0,
+              notification: {
+                key: 1,
+                message: "Eba, sua nota está dentro da média",
+              },
             },
           },
           {
             course_name: "Geografia",
-            freq: 95,
-            incidence: 7,
+            freq: 62,
+            incidence: 25,
+            notification: {
+              key: 0,
+              message: "Atenção, você está quase atingindo o limite de faltas",
+            },
             tarefas: {
-              average_tasks_per_class: 8,
-              tasks_assigned: 8,
-              tasks_completed: 5,
+              average_tasks_per_class: 5,
+              tasks_assigned: 9,
+              tasks_completed: 1,
             },
             avaliacoes: {
-              studentGrade: 9.164,
-              averageClass: 5.962,
+              studentGrade: 1,
+              averageClass: 4.503,
               maximumTestScore: 0,
+              notification: {
+                key: 0,
+                message: "Poxa, sua nota está abaixo da média",
+              },
             },
           },
         ],
@@ -205,68 +307,102 @@ const [studentPanel]: StudentPanel[] = [
         courses: [
           {
             course_name: "Matemática",
-            freq: 63,
+            freq: 77,
+            incidence: 18,
+            notification: {
+              key: 2,
+              message:
+                "Eba, sua presença em aulas está constante.\nContinue assim",
+            },
+            tarefas: {
+              average_tasks_per_class: 6,
+              tasks_assigned: 10,
+              tasks_completed: 1,
+            },
+            avaliacoes: {
+              studentGrade: 5.672,
+              averageClass: 4.844,
+              maximumTestScore: 0,
+              notification: {
+                key: 1,
+                message: "Eba, sua nota está dentro da média",
+              },
+            },
+          },
+          {
+            course_name: "História",
+            freq: 78,
+            incidence: 18,
+            notification: {
+              key: 2,
+              message:
+                "Eba, sua presença em aulas está constante.\nContinue assim",
+            },
+            tarefas: {
+              average_tasks_per_class: 9,
+              tasks_assigned: 8,
+              tasks_completed: 6,
+            },
+            avaliacoes: {
+              studentGrade: 5.3,
+              averageClass: 4.294,
+              maximumTestScore: 0,
+              notification: {
+                key: 1,
+                message: "Eba, sua nota está dentro da média",
+              },
+            },
+          },
+          {
+            course_name: "Português",
+            freq: 60,
             incidence: 25,
+            notification: {
+              key: 0,
+              message: "Atenção, você está quase atingindo o limite de faltas",
+            },
+            tarefas: {
+              average_tasks_per_class: 9,
+              tasks_assigned: 6,
+              tasks_completed: 8,
+            },
+            avaliacoes: {
+              studentGrade: 7.476,
+              averageClass: 2.393,
+              maximumTestScore: 0,
+              notification: {
+                key: 1,
+                message: "Eba, sua nota está dentro da média",
+              },
+            },
+          },
+          {
+            course_name: "Geografia",
+            freq: 94,
+            incidence: 7,
+            notification: {
+              key: 2,
+              message:
+                "Eba, sua presença em aulas está constante.\nContinue assim",
+            },
             tarefas: {
               average_tasks_per_class: 9,
               tasks_assigned: 10,
               tasks_completed: 4,
             },
             avaliacoes: {
-              studentGrade: 4.377,
-              averageClass: 2.825,
+              studentGrade: 5.74,
+              averageClass: 9.914,
               maximumTestScore: 0,
-            },
-          },
-          {
-            course_name: "História",
-            freq: 86,
-            incidence: 5,
-            tarefas: {
-              average_tasks_per_class: 6,
-              tasks_assigned: 7,
-              tasks_completed: 4,
-            },
-            avaliacoes: {
-              studentGrade: 9.256,
-              averageClass: 7.632,
-              maximumTestScore: 0,
-            },
-          },
-          {
-            course_name: "Português",
-            freq: 95,
-            incidence: 5,
-            tarefas: {
-              average_tasks_per_class: 7,
-              tasks_assigned: 6,
-              tasks_completed: 6,
-            },
-            avaliacoes: {
-              studentGrade: 5.643,
-              averageClass: 1,
-              maximumTestScore: 0,
-            },
-          },
-          {
-            course_name: "Geografia",
-            freq: 82,
-            incidence: 8,
-            tarefas: {
-              average_tasks_per_class: 5,
-              tasks_assigned: 7,
-              tasks_completed: 3,
-            },
-            avaliacoes: {
-              studentGrade: 7.447,
-              averageClass: 5.514,
-              maximumTestScore: 0,
+              notification: {
+                key: 1,
+                message: "Eba, sua nota está dentro da média",
+              },
             },
           },
         ],
       },
     ],
-    statement: null,
   },
 ];
 
@@ -280,4 +416,24 @@ export const getTerms = () => {
 
 export const getTermsName = () => {
   return studentPanel.terms.map((term) => term.term_name);
+};
+
+export const getStatusPerSubject = () => {
+  return studentPanel.terms.map((term) => {
+    const subjectPerTerm: any = {};
+    subjectPerTerm[term.term_name] = term.courses.map((course) => {
+      const statusPerSubject: any = {};
+      statusPerSubject[course.course_name] = {
+        attendance: {
+          freq: course.freq,
+          incidence: course.incidence,
+          notification: course.notification,
+        },
+        grade: course.avaliacoes,
+        registers: course.tarefas,
+      };
+      return statusPerSubject;
+    });
+    return subjectPerTerm;
+  });
 };

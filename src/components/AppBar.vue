@@ -35,6 +35,13 @@ import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { router } from "../router"
 
+interface Member {
+    _id: string,
+    name: string,
+    img_path: string,
+    group: string
+}
+
 const route = useRoute()
 
 let currentLabel: string
@@ -55,7 +62,7 @@ let clicked = () => {
     isOpen.value = !isOpen.value
 }
 
-function setMember(member) {
+function setMember(member: Member) {
     localStorage.setItem('currentMember', JSON.stringify(member))
     router.push({name: 'studentpainel', params: {'id': member._id}})
     currentLabel = member.name

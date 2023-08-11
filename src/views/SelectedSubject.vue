@@ -2,7 +2,6 @@
     <div class="app">
         <AppBar/>
             <SelectedSubjected></SelectedSubjected>
-        <TheFooter/>
     </div>
     </template>
 

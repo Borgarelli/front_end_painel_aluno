@@ -20,18 +20,35 @@
         <div class="line"></div>
         <div class="content-container">
             <div class="content">
-                {{ content }}
+                <div class="content" v-show="title === 'Registros Acadêmicos'">
+                    <span>Não trouxe material para a aula </span>
+                </div>
+                <div class="content" v-show="title === 'Notas'">
+                    <span>Última nota liberada <span class="result-note">{{ content.averageClass }}</span></span>
+                </div>
+                <div class="content" v-show="title === 'Frequência'">
+                    <span>{{ content.freq }} Faltas <span class="result-freq">65% de presença</span></span>
+                </div>
             </div>
+            <div class="line-content"></div>
             <div class="date"> 11 de Agosto </div>
+            <div class="content" v-show="title === 'Registros Acadêmicos'">
+                <button class="btn"><span>Ver Desempenho</span></button>
+            </div>
+            <div class="content" v-show="title === 'Frequência'">
+                <button class="btn"><span>Ver Desempenho</span></button>
+            </div>
+            <div class="content" v-show="title === 'Notas'">
+                <button class="btn-freq"><span>Ver todos</span></button><button class="btn-note"><span>Revisar conteúdo</span></button>
+            </div>
         </div>
-
     </div>
 </template>
 
 <script setup lang="ts">
-import registers from '../assets/registers.svg'
-import grades from '../assets/grades.svg'
-import attendance from '../assets/attendance.svg'
+import registers from '@/assets/registers.svg'
+import grades from '@/assets/grades.svg'
+import attendance from '@/assets/attendance.svg'
 
 defineProps<{
     title: any,
@@ -99,20 +116,96 @@ img {
     height: 1px;
     width: 100%;
 }
+
+.btn {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid #D7DEE3;
+    background: #FFF;
+}
+.btn-freq {
+    margin-top: 10px;
+    display: flex;
+    width: 50%;
+    height: 40px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid #D7DEE3;
+    background: #FFF;
+}
+.btn-note {
+    margin-top: 10px;
+    display: flex;
+    width: 50%;
+    height: 40px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid #00B8AD;
+    background: #00B8AD;
+}
+
+.btn-note span {
+    color: #FFF;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 16.8px */
+}
+.btn > span {
+    color: #434E5B;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 16.8px */
+}
+.btn-freq > span {
+    color: #434E5B;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 16.8px */
+}
+
 .content-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 3px;
 }
 .content {
     display: flex;
     justify-content: left;
     color: var(--gray-90);
-    gap: 8px;
+    gap: 15px;
     text-align: left;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
+}
+
+.content-result {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 8px;
 }
 .date {
     display: flex;
@@ -127,5 +220,30 @@ img {
     line-height: 100%; /* 12px */
 }
 
+.result {
+    position: absolute;
+    right: 80px;
+}
+
+.result-freq {
+    position: absolute;
+    right: 80px;
+    color: #F0AF09;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+.result-note {
+    position: absolute;
+    right: 80px;
+    color: red;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
 
 </style>

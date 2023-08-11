@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import StudentPanel from "../views/StudentPanel.vue";
 import SelectUser from "../views/SelectUser.vue";
-import TelaTesteView from "../views/TelaTesteView.vue";
+import SelectedSubject from "../views/SelectedSubject.vue";
 
 const routes = [
   {
@@ -15,9 +15,9 @@ const routes = [
     component: StudentPanel,
   },
   {
-    path: "/teste",
-    name: "testes",
-    component: TelaTesteView,
+    path: "/studentPainel/:id/:subject",
+    name: "selectedsubject",
+    component: SelectedSubject,
   },
 ];
 

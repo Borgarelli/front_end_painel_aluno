@@ -1,14 +1,16 @@
 <template>
     <div class="app">
         <AppBar/>
+            <SelectedSubjected></SelectedSubjected>
         <TheFooter/>
     </div>
     </template>
-    
+
     <script setup lang="ts">
     import AppBar  from '../components/AppBar.vue';
+    import SelectedSubjected from '../components/SelectedSubjected.vue';
     </script>
-    
+
     <style scoped>
     .app {
         display: flex;
@@ -16,5 +18,5 @@
         width: 100vw;
         height: 100vh;
     }
-    
+
     </style>

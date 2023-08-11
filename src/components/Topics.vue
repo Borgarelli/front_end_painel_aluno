@@ -27,10 +27,12 @@ import grades from '@/assets/grades.svg'
 import attendance from '@/assets/attendance.svg'
 // import lecture from '@/assets/lecture.svg'
 
-defineProps<{
+const props = defineProps<{
   title: string
   content?: any | undefined
 }>()
+
+localStorage.setItem('contentSubject', JSON.stringify(props.content))
 </script>
 <style scoped>
 

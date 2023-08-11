@@ -18,8 +18,10 @@
   --back: #F3F4F5;
   --gray-20: #EEF1F5;
   --gray-30: #E8ECEF;
+  --gray-40: #D7DEE3;
   --gray-70: #748494;
   --gray-80: #405261;
+  --gray-90: #1D2B36;
   --selected: #232B34;
   --label: #000000;
   --sublabel: #92959E;
@@ -45,7 +47,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   background-color: #F3F4F5;
-  
+
 }
 
 .card {

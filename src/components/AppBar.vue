@@ -86,6 +86,11 @@ a {
     padding: 10px;
     position: relative;
     transition: 0.4s;
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
 }
 
 .sub-items {

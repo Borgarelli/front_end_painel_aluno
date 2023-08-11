@@ -21,14 +21,14 @@
 </template>
 <script setup lang="ts">
 defineProps<{
-  title: string
-  subtitle:string
-  content: string
-  img_path: string
+  title?: string
+  subtitle?:string
+  content?: string
+  img_path?: string
 }>()
 </script>
 
-<style scoped>
+<style>
 .main1 {
  display: flex;
  flex-direction: column;

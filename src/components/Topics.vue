@@ -18,6 +18,7 @@
                     <span class="topics-text">{{ analytics.notification  ? analytics.notification.message : "Olha, você tem uma nova notificação" as any }}</span>
                 </div>
             </div>
+            <el-button type="primary" @click ="setSubject(title)"> Ver Detalhes </el-button>
         </div>
     </div>
 </template>
@@ -25,14 +26,21 @@
 import registers from '@/assets/registers.svg'
 import grades from '@/assets/grades.svg'
 import attendance from '@/assets/attendance.svg'
+import { router } from "../router"
+import { useRoute } from 'vue-router';
 // import lecture from '@/assets/lecture.svg'
 
-const props = defineProps<{
+defineProps<{
   title: string
   content?: any | undefined
 }>()
 
-localStorage.setItem('contentSubject', JSON.stringify(props.content))
+const route = useRoute()
+
+function setSubject(title: string) {
+    router.push({name: 'selectedsubject', params: {'id': route.params._id, 'subject': title}})
+}
+
 </script>
 <style scoped>
 
@@ -100,4 +108,24 @@ localStorage.setItem('contentSubject', JSON.stringify(props.content))
     width: 30px;
     height: 30px;
 }
+
+.el-button {
+    display: flex !important;
+    width: 100% !important;
+    height: 40px !important;
+    padding: 0px 16px !important;
+    justify-content: center!important;
+    align-items: center !important;
+    gap: 10px !important;
+
+    border-radius: 4px !important;
+    border: 1px solid var(--gray-40) !important;
+    background: #FFF !important;
+
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 120% !important;
+    }
+
 </style>

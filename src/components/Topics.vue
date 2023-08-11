@@ -23,12 +23,12 @@
     </div>
 </template>
 <script setup lang="ts">
-import registers from '@/assets/registers.svg'
-import grades from '@/assets/grades.svg'
-import attendance from '@/assets/attendance.svg'
+import registers from '../assets/registers.svg'
+import grades from '../assets/grades.svg'
+import attendance from '../assets/attendance.svg'
 import { router } from "../router"
 import { useRoute } from 'vue-router';
-// import lecture from '@/assets/lecture.svg'
+// import lecture from '../assets/lecture.svg'
 
 const props = defineProps<{
   title: string

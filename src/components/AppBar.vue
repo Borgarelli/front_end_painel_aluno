@@ -3,19 +3,19 @@
             <div class="menu-item" v-show="!isOpen">
 
                 <a href="#">{{ currentLabel }}</a>
-                <img alt="sandwich-menu" src="@/assets/sanduiche.svg">
+                <img alt="sandwich-menu" src="../assets/sanduiche.svg">
             </div>
             <!-- <Transition name="slide"> -->
                 <div class="sub-items" v-show="isOpen">
                     <div class="menu-item">
                         <!-- <Transition name="fade" appear> -->
                         <RouterLink to="/"> Visão Geral </RouterLink>
-                        <img alt="sandwich-menu" src="@/assets/sanduiche.svg">
+                        <img alt="sandwich-menu" src="../assets/sanduiche.svg">
                     </div>
                     <div class="menu-item" v-for="member in members">
                         <!-- <RouterLink :to="{name: 'studentpainel', params: {'id': member._id}}"> {{ member.name }} </RouterLink> -->
                         <a @click="setMember(member)"> {{ member.name }}</a>
-                        <!-- <img alt="sandwich-menu" src="@/assets/sanduiche.png"> -->
+                        <!-- <img alt="sandwich-menu" src="../assets/sanduiche.png"> -->
                     </div>
                 </div>
             <!-- </Transition> -->

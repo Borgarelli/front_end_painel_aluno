@@ -1,7 +1,7 @@
 <template>
     <div class="section">
         <div class="group">
-          <img src="@/assets/user_profile.svg">
+          <img src="../assets/user_profile.svg">
           <div class="title">
             {{ label }}
             <div class="subtitle">

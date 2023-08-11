@@ -1,7 +1,7 @@
 <template>
     <div class="register-container">
         <div class="header">
-            <img src="@/assets/user_profile.svg"/>
+            <img src="../assets/user_profile.svg"/>
             <div class="text">
                 <div class="title"> Lia </div>
                 <div class="subtitle"> Assistente Pedagógica Virtual</div>

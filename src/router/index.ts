@@ -3,6 +3,7 @@ import StudentPanel from "../views/StudentPanel.vue";
 import SelectUser from "../views/SelectUser.vue";
 import SelectedSubject from "../views/SelectedSubject.vue";
 
+
 const routes = [
   {
     path: "/",
@@ -18,7 +19,7 @@ const routes = [
     path: "/studentPainel/:id/:subject",
     name: "selectedsubject",
     component: SelectedSubject,
-  },
+  }
 ];
 
 export const router = createRouter({

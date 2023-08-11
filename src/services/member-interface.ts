@@ -16,6 +16,12 @@ export interface Course {
   incidence: number;
   tarefas: Tarefa;
   avaliacoes: Avaliacoes;
+  notification: Notification;
+}
+
+export interface Notification {
+  key: number;
+  message: string;
 }
 
 export interface Term {

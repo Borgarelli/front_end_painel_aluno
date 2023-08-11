@@ -34,7 +34,7 @@ const activeTerm = ref("3º Bimestre")
 
 </script>
 
-<style scoped>
+<style>
 
 .el-tabs__nav{
     gap: 8px !important;

@@ -1,21 +1,26 @@
 <template>
     <div class="section">
-        <div class="title">
-          {{ label }}
-          <div class="subtitle">
-            {{ sublabel }}
-            <div class="body">
-              <slot></slot>
+        <div class="group">
+          <div v-if="img_path"></div>
+          <img :src="img_path"/>
+          <div class="title">
+            {{ label }}
+            <div class="subtitle">
+              {{ sublabel }}
             </div>
           </div>
+        </div>
+        <div class="body">
+          <slot></slot>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
 defineProps<{
-  label?: string
-  sublabel?:string
+  label?: string | undefined
+  sublabel?:string | undefined
+  img_path?: string
 }>()
 
 </script>
@@ -27,13 +32,17 @@ defineProps<{
   background-color: #FFF;
   border-radius: .5em;
   padding: 1em;
-  margin: 1em 15vw 1em 15vw;
+  margin: 1em 8vw 1em 8vw;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  gap: 10.6px;
 }
 
 .title {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
   font-size: 1.1em;
   font-weight: 600;
   color: var(--label);

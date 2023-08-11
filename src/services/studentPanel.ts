@@ -2,7 +2,7 @@ import { StudentPanel } from "./member-interface";
 
 const [studentPanel]: StudentPanel[] = [
   {
-    codigoAluno: 2,
+    codigoAluno: 1,
     name: "Paulo Freitas",
     terms: [
       {

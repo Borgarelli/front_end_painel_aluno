@@ -40,7 +40,6 @@ const route = useRoute()
 
 function setSubject(title: string, content: any) {
     router.push({name: 'selectedsubject', params: {'id': route.params._id, 'subject': title, 'content': content}})
-    console.log(content)
 }
 
 </script>

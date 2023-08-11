@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import Load from '@/components/Load.vue'
+import Load from '../components/Load.vue'
 
 </script>
 

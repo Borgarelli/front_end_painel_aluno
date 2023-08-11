@@ -2,7 +2,6 @@
 <div class="app">
     <AppBar/>
     <TermsBar :terms="termsNames"/>
-    <TheFooter/>
 </div>
 </template>
 

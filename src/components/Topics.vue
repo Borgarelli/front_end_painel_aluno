@@ -30,10 +30,12 @@ import { router } from "../router"
 import { useRoute } from 'vue-router';
 // import lecture from '../assets/lecture.svg'
 
-defineProps<{
+const props = defineProps<{
   title: string
   content?: any | undefined
 }>()
+
+localStorage.setItem('currentTerm', JSON.stringify(props.content))
 
 const route = useRoute()
 

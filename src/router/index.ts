@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import StudentPanel from "../views/StudentPanel.vue";
-import SelectUser from "../views/SelectUser.vue";
-import SelectedSubject from "../views/SelectedSubject.vue";
+import StudentPanel from "@/views/StudentPanel.vue";
+import SelectUser from "@/views/SelectUser.vue";
+import SelectedSubject from "@/views/SelectedSubject.vue";
+import LoadView from "@/views/LoadView.vue";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: "/studentPainel/:id/:subject",
     name: "selectedsubject",
     component: SelectedSubject,
+  },
+  {
+    path: "/loading",
+    name: "loading",
+    component: LoadView,
   },
 ];
 

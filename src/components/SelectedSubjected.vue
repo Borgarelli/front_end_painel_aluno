@@ -5,7 +5,7 @@
         </div>
         <LiaText></LiaText>
         <div v-for="analytics in content[0]">
-            <Resume :title="analytics.name" :content="'asas'" :resume="analytics.notification  ? analytics.notification.message : 'Olha, você tem uma nova notificação'"></Resume>
+            <Resume :title="analytics.name" :content="analytics" :resume="analytics.notification  ? analytics.notification.message : 'Olha, você tem uma nova notificação'"></Resume>
         </div>
     </div>
     </template>

@@ -12,6 +12,8 @@ import grades from '@/assets/layers.png'
 import attendance from '@/assets/menu.png'
 import lecture from '@/assets/registers.png'
 
+// const selectedSubjects = JSON.parse(localStorage.getItem('selectedItem'))
+
 const imgs = [registers, grades, attendance, lecture]
 
 </script>

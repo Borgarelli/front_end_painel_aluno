@@ -1,15 +1,12 @@
 <template>
     <div class="app">
         <AppBar/>
-        <MemberTopics/>
         <TheFooter/>
     </div>
-</template>
+    </template>
     
     <script setup lang="ts">
-import AppBar  from '../components/AppBar.vue';
-import MemberTopics from '../components/MemberTopics.vue';
-
+    import AppBar  from '../components/AppBar.vue';
     </script>
     
     <style scoped>

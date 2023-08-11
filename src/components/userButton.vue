@@ -1,6 +1,7 @@
 <template>
 <div class="user" @click="setUser">
     <PainelSection :label="member.name" :sublabel="member.group " :img_path="img_path">
+        <button class="btn"><span class="msg">Ver Desempenho</span></button>
     </PainelSection>
 </div>
 </template>

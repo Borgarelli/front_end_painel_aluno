@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import AppBar from '../components/AppBar.vue';
 import TheFooter from '../components/TheFooter.vue';
-import UserButton from '../components/UserButton.vue';
+import UserButton from '../components/userButton.vue';
 
 const members = JSON.parse(localStorage.getItem('members') as string)
 

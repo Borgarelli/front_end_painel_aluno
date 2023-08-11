@@ -7,8 +7,7 @@
                         Últimas Atualizações
                     </div>
                     <div class="" v-for="subject in currentBimestreData">
-
-                        <CompButtons></CompButtons>
+                        <Topics :title="Object.keys(subject)[0]" :content="Object.values(subject)" ></Topics>
                     </div>
                 </div>
             </el-tab-pane>
@@ -20,7 +19,7 @@
 
 import type { TabsPaneContext } from 'element-plus'
 import { getStatusPerSubject } from '../services/studentPanel.ts'
-import CompButtons from './CompButtons.vue'
+import Topics from './Topics.vue'
 import { ref, computed } from 'vue';
 
 defineProps<{

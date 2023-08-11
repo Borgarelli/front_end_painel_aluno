@@ -424,13 +424,20 @@ export const getStatusPerSubject = () => {
     subjectPerTerm[term.term_name] = term.courses.map((course) => {
       const statusPerSubject: any = {};
       statusPerSubject[course.course_name] = {
+        registers: {
+          ...course.tarefas,
+          name: "Registros Acadêmicos",
+        },
         attendance: {
+          name: "Frequência",
           freq: course.freq,
           incidence: course.incidence,
           notification: course.notification,
         },
-        grade: course.avaliacoes,
-        registers: course.tarefas,
+        grade: {
+          ...course.avaliacoes,
+          name: "Notas",
+        },
       };
       return statusPerSubject;
     });

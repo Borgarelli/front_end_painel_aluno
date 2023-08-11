@@ -24,7 +24,7 @@ const route = useRoute()
 const subject = route.params.subject
 
 function rollBack() {
-    router.push({name: 'studentpainel', params: {'id': route.params._id}})
+    router.push({name: 'studentpainel', params: {'id': route.params._id,}})
 }
 
 </script>

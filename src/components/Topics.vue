@@ -35,8 +35,7 @@ const props = defineProps<{
   content?: any | undefined
 }>()
 
-localStorage.setItem('currentTerm', JSON.stringify(props.content))
-
+localStorage.setItem('contentSubject', JSON.stringify(props.content))
 const route = useRoute()
 
 function setSubject(title: string, content: any) {

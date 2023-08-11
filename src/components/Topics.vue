@@ -30,15 +30,17 @@ import { router } from "../router"
 import { useRoute } from 'vue-router';
 // import lecture from '@/assets/lecture.svg'
 
-defineProps<{
+const props = defineProps<{
   title: string
   content?: any | undefined
 }>()
 
+localStorage.setItem('contentSubject', JSON.stringify(props.content))
 const route = useRoute()
 
 function setSubject(title: string, content: any) {
     router.push({name: 'selectedsubject', params: {'id': route.params._id, 'subject': title, 'content': content}})
+    console.log(content)
 }
 
 </script>

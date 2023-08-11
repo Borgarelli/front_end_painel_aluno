@@ -1,4 +1,6 @@
-const [studentPanel] = [
+import { StudentPanel } from "./member-interface";
+
+const [studentPanel]: StudentPanel[] = [
   {
     codigoAluno: 3,
     name: "Juliana Bueno Silva",
@@ -270,7 +272,7 @@ const [studentPanel] = [
 
 export const getTerms = () => {
   return studentPanel.terms.map((term) => {
-    const obj = {};
+    const obj: any = {};
     obj[term.term_name] = term.courses;
     return obj;
   });

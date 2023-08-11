@@ -2,7 +2,15 @@
     <div class="resume-container">
         <div class="top-content">
             <div class="header">
-                <img src="@/assets/user_profile.svg"/>
+                <div class="nha" v-show="title === 'Registros Acadêmicos'">
+                    <img class="img" :src="registers" >
+                </div>
+                <div class="nha" v-show="title === 'Notas'">
+                    <img class="img" :src="grades">
+                </div>
+                <div class="nha" v-show="title === 'Frequência'">
+                    <img class="img" :src="attendance">
+                </div>
                 <div class="title"> {{ title }} </div>
             </div>
             <div class="resume">
@@ -21,6 +29,10 @@
 </template>
 
 <script setup lang="ts">
+import registers from '@/assets/registers.svg'
+import grades from '@/assets/grades.svg'
+import attendance from '@/assets/attendance.svg'
+
 defineProps<{
     title: any,
     resume: any,
@@ -31,6 +43,10 @@ defineProps<{
 </script>
 
 <style scoped>
+
+.nha {
+    height: 40px;
+}
 .resume-container {
     display: flex;
     flex-direction: column;
@@ -61,7 +77,7 @@ img {
 }
 .title {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     margin: 0;
 }

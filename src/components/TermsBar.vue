@@ -7,9 +7,7 @@
                         Últimas Atualizações
                     </div>
                     <div class="">
-                        <PainelSectionVue label="História">
-                            {{ term }}
-                        </PainelSectionVue>
+                        <CompButtons></CompButtons>
                     </div>
                 </div>
             </el-tab-pane>
@@ -20,7 +18,7 @@
 <script setup lang="ts">
 
 import type { TabsPaneContext } from 'element-plus'
-import PainelSectionVue from './PainelSection.vue';
+import CompButtons from './CompButtons.vue'
 import { ref } from 'vue';
 
 defineProps<{

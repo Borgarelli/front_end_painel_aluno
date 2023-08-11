@@ -29,9 +29,9 @@
 </template>
 
 <script setup lang="ts">
-import registers from '@/assets/registers.svg'
-import grades from '@/assets/grades.svg'
-import attendance from '@/assets/attendance.svg'
+import registers from '../assets/registers.svg'
+import grades from '../assets/grades.svg'
+import attendance from '../assets/attendance.svg'
 
 defineProps<{
     title: any,

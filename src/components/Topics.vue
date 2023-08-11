@@ -18,7 +18,7 @@
                     <span class="topics-text">{{ analytics.notification  ? analytics.notification.message : "Olha, você tem uma nova notificação" as any }}</span>
                 </div>
             </div>
-            <el-button type="primary" @click ="setSubject(title)"> Ver Detalhes </el-button>
+            <el-button type="primary" @click ="setSubject(title, content)"> Ver Detalhes </el-button>
         </div>
     </div>
 </template>
@@ -37,8 +37,8 @@ defineProps<{
 
 const route = useRoute()
 
-function setSubject(title: string) {
-    router.push({name: 'selectedsubject', params: {'id': route.params._id, 'subject': title}})
+function setSubject(title: string, content: any) {
+    router.push({name: 'selectedsubject', params: {'id': route.params._id, 'subject': title, 'content': content}})
 }
 
 </script>

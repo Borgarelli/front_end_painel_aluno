@@ -1,6 +1,7 @@
 <template>
         <nav @click="clicked()">
             <div class="menu-item" v-show="!isOpen">
+
                 <a href="#">{{ currentLabel }}</a>
                 <img alt="sandwich-menu" src="@/assets/sanduiche.svg">
             </div>
@@ -87,7 +88,7 @@ a {
     position: relative;
     transition: 0.4s;
 
-    font-size: 12px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%;

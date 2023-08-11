@@ -34,6 +34,11 @@ function setUser() {
 .user {
     width: 100%;
     height: 100%;
+    font-size: 10.994px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%
+
 }
 
 .btn {
@@ -45,6 +50,8 @@ function setUser() {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    position: relative;
+    top: 6px;
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid #E8ECEF;
@@ -58,6 +65,6 @@ function setUser() {
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    line-height: 140%; 
+    line-height: 140%;
 }
 </style>

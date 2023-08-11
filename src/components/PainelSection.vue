@@ -1,8 +1,7 @@
 <template>
     <div class="section">
         <div class="group">
-          <div v-if="img_path"></div>
-          <img :src="img_path"/>
+          <img src="@/assets/user_profile.svg">
           <div class="title">
             {{ label }}
             <div class="subtitle">
@@ -40,13 +39,16 @@ defineProps<{
   flex-direction: row;
   text-align: left;
   gap: 10.6px;
+  align-items: center;
 }
 
 .title {
+  display: flex;
+  flex-direction: column;
   font-size: 1.1em;
   font-weight: 600;
   color: var(--label);
-  margin-bottom: 1em;
+  margin: 0;
 }
 
 .subtitle {

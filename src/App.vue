@@ -2,8 +2,6 @@
 import { getMembers } from './services/members';
 
 const members = getMembers()
-const studentPanel = ""
-
 localStorage.setItem('members', JSON.stringify(members))
 localStorage.setItem
 
